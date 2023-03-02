@@ -20,7 +20,7 @@ const Footer = () => {
                                     <span className='hidden lg:block ml-3 mr-6'>&#8226;</span>
                                 ) : null
                                 }
-                                <a href={link.link} className='flex items-center gap-2'>{link.title}</a>
+                                <a href={link.link} className='flex items-center gap-2 hvr-underline-from-left'>{link.title}</a>
                             </li>
                         ))}
                     </ul>

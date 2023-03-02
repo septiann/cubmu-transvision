@@ -19,7 +19,7 @@ const Navbar = () => {
                     key={nav.id}
                     className={`font-mulish ${window.location.pathname == nav.link ? "font-[700]" : "font-[400]"}  cursor-pointer text-[#B1B2B3] text-[14px]`}
                 >
-                    <a href={nav.link} className='flex items-center gap-2'>
+                    <a href={nav.link} className='flex items-center gap-2 hvr-underline-from-left'>
                         {nav.title}
 
                         {nav.link == "/category" ? (
