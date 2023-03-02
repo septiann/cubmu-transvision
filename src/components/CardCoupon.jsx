@@ -10,6 +10,7 @@ import styles from '../style';
 import Category from './Category';
 import { AnimatePresence, motion } from 'framer-motion';
 import CategoryDesktop from './CategoryDesktop';
+import icon_chevron_right from '../assets/icon-chevron-right.svg';
 moment.locale('id');
 
 const CardCoupon = () => {
@@ -55,6 +56,9 @@ const CardCoupon = () => {
                   {item.couponBenefitType === 'Buy 1 Get 1' ? null : (
                     <h4 className={`font-inter font-[500] text-grey2 text-[16px]`}>{item.couponBenefitType}</h4>
                   )}
+                  <button className='items-center ml-auto gap-1 hidden lg:flex font-mulish font-[600] text-[12px] text-grey3 py-2 px-3 rounded-full border border-solid border-grey4'>
+                    T&C <img src={icon_chevron_right} alt='icon_chevron_right' style={{ transform: "rotate(270deg)", width: "10px" }} />
+                  </button>
                 </div>
                 <h6 className={`font-mulish font-[400] text-grey3 text-[10px] lg:text-[12px]`}>Promo sampai {moment(item.couponEndDate).format("DD MMMM YYYY")}</h6>
                 <Button data={item} />
