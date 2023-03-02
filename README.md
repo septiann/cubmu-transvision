@@ -33,4 +33,4 @@ Start the server
 
 ## Tech Stack
 
-React, Redux, Redux-Thunk, React-Redux, Axios, TailwindCSS, Moment, Framer Motion, Vite, Vercel.
+React, Redux, Redux-Thunk, React-Redux, Axios, TailwindCSS, React Content Loader, Moment, Framer Motion, Vite, Vercel.
