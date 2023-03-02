@@ -36,13 +36,14 @@ const CardCoupon = () => {
         <Category active={active} handleClick={handleClickCategory} />
         {isLoading && <Loader />}
         {error && <p>{error}</p>}
-        {coupon.result?.length == 0 ? (<h4 className='text-white'>Data is empty</h4>) : null}
+        {coupon.result?.length == 0 ? (<h4 className='text-white'>Kupon tidak tersedia.</h4>) : null}
         <AnimatePresence>
           {coupon.result?.map((item, index) => (
             <motion.div
-              initial={{ transform: "scale(0)" }}
-              animate={{ transform: "scale(1)" }}
-              exit={{ transform: "scale(0)" }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              exit={{ scale: 0.5, opacity: 0 }}
               className='flex lg:flex-col lg:w-full'
               key={item.couponId}
             >
