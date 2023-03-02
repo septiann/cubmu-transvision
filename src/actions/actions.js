@@ -14,13 +14,18 @@ const fetchCouponFailure = (error) => ({
     payload: error,
 });
 
-export const fetchDataCoupon = () => {
+export const fetchDataCoupon = (categoryId) => {
     return (dispatch) => {
         dispatch(fetchCouponRequest());
         axios
             .get("https://requestly.dev/api/mockv2/getCoupon?username=user1673281842743")
             .then((response) => {
                 const data = response.data;
+
+                if (categoryId) {
+                    data.result = data.result.filter((item) => item.couponCategoryId === categoryId);
+                }
+
                 dispatch(fetchCouponSuccess(data));
             })
             .catch((error) => {

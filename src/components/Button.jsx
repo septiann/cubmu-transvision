@@ -19,7 +19,7 @@ const Button = (props) => {
                 <div className='w-full'>
                   <img src={props.data.couponBrandLogo} alt={props.data.couponName} />
                 </div>
-                <div className="absolute bottom-0 w-full p-6 flex-auto flex flex-col rounded-t-3xl border-2 bg-white">
+                <div className="absolute bottom-0 w-full p-6 flex-auto flex flex-col rounded-t-3xl border-2 bg-white h-[60vh] justify-between">
                   <div className='flex items-center justify-between'>
                     <div>
                       <h4 className={`font-inter font-[600] text-[#14142B] text-[18px]`}>{props.data.couponName}</h4>
